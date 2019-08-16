@@ -51,7 +51,7 @@
         さようなら！
   %form.main__form
     %input.main__form--message{type: "text", placeholder: "type a message"}
-      %label.main__form--upload-label{for: "upload-icon"}
+      %label.main__form--image.upload-label{for: "upload-icon"}
         %i.fa.fa-picture-o
-        = f.file_field :image, id: "upload-icon"
-      %input.main__form--button{type: "submit", value: "Send"}
+        %input.file_field{type: "file", id: "upload-icon"}
+    %input.main__form--button{type: "submit", value: "Send"}

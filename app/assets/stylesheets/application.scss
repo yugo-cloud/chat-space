@@ -146,10 +146,11 @@
       width: calc(100vw - 520px);
       position: relative;
     }
-    &--upload-label {
+    &--image {
       position: absolute;
       right: 165px;
       top: 35px;
+      cursor: pointer;
       a {
         color: #000;
       }
@@ -167,4 +168,6 @@
     }
   }
 }
-
+.file_field{
+  display: none;
+}
