@@ -51,7 +51,7 @@
         さようなら！
   %form.main__form
     %input.main__form--message{type: "text", placeholder: "type a message"}
-      %span.main__form--image
-        = link_to root_path do
-          =fa_icon 'edit'
+      %label.main__form--upload-label{for: "upload-icon"}
+        %i.fa.fa-picture-o
+        = f.file_field :image, id: "upload-icon"
       %input.main__form--button{type: "submit", value: "Send"}

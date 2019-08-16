@@ -3,6 +3,9 @@
  */
 @import "./reset";
 @import "./variable";
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
 
 .flash {
   background: $mainBlueColor;
@@ -143,7 +146,7 @@
       width: calc(100vw - 520px);
       position: relative;
     }
-    &--image {
+    &--upload-label {
       position: absolute;
       right: 165px;
       top: 35px;
