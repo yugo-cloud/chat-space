@@ -147,6 +147,7 @@
       position: absolute;
       right: 165px;
       top: 35px;
+      cursor: pointer;
       a {
         color: #000;
       }
@@ -164,4 +165,6 @@
     }
   }
 }
-
+.file_field{
+  display: none;
+}
