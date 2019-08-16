@@ -1,0 +1,57 @@
+%div.flash
+  グループを作成しました
+
+%div.side-menu
+  %div.side-menu__header
+    %div.side-menu__header--item
+      test-user
+    %span<>
+      = link_to root_path do
+        =fa_icon 'edit'
+      = link_to root_path do
+        =fa_icon 'cog'
+  %div.side-menu__lists
+    %div.side-menu__list
+      %div.side-menu__list--group
+        test-group
+      %div.side-menu__list--message
+        さようなら
+    %div.side-menu__list
+      %div.side-menu__list--group
+        sample-group
+      %div.side-menu__list--message
+        hello!
+    %div.side-menu__list
+      %div.side-menu__list--group
+        example
+      %div.side-menu__list--message
+        まだメッセージがありません
+%div.main
+  %div.main__header
+    %div.main__header--group-name
+      test-group
+    %p.main__header--members
+      Members: test-user
+    %a.main__header--button
+      Edit
+  %div.main__contents
+    %div.main__content
+      %div.main__content--user-name
+        test-user
+        %span.main__content--date<>
+          2019/02/13(Wed) 17:50:36
+      %div.main__content--message
+        こんにちは！
+    %div.main__content
+      %div.main__content--user-name
+        test-user
+        %span.main__content--date<>
+          2019/02/13(Wed) 17:50:42
+      %div.main__content--message
+        さようなら！
+  %form.main__form
+    %input.main__form--message{type: "text", placeholder: "type a message"}
+      %span.main__form--image
+        = link_to root_path do
+          =fa_icon 'edit'
+      %input.main__form--button{type: "submit", value: "Send"}
