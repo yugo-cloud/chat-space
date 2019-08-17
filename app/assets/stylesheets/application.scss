@@ -6,17 +6,7 @@
 @import "modules/user";
 @import "config/colors";
 @import "modules/flash";
-
-// .flash {
-//   background: $mainBlueColor;
-//   width: 100vw;
-//   height: 25px;
-//   color: #fff;
-//   text-align: center;
-//   position: fixed;
-//   top: 0;
-//   z-index: 999;
-// }
+@import "modules/group";
 
 .side-bar {
   min-height: 100vh;
