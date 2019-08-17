@@ -23,9 +23,11 @@
           2019/02/13(Wed) 17:50:42
       %div.main__content--message
         さようなら！
-  %form.main__form
-    %input.main__form--message{type: "text", placeholder: "type a message"}
-      %label.main__form--image.upload-label{for: "upload-icon"}
-        %i.fa.fa-picture-o
-        %input.file_field{type: "file", id: "upload-icon"}
-    %input.main__form--button{type: "submit", value: "Send"}
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
