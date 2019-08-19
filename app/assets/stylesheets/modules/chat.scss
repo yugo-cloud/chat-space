@@ -1,12 +1,17 @@
 .chat {
-  width: calc(100% - 300px);
-  position: fixed;
-  top: 0;
-  left: 300px;
+  float: right;
+  height: 100vh;
+  width: calc(100vw - 300px);
   .header {
+    background-color: $white;
     box-sizing: border-box;
+    width: calc(100vw - 300px);
     height: 100px;
     padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 300px;
+    z-index: 5;
     .left-header {
       float: left;
       &__title {
@@ -41,10 +46,16 @@
   }
 
   .messages {
-    background-color: #FAFAFA;
     box-sizing: border-box;
-    padding: 46px 40px 0;
-    min-height: calc(100vh - 100px - 90px);
+    background-color: #FAFAFA;
+    padding: 146px 40px 90px;
+    height: 100vh;
+    width: calc(100vw - 300px);
+    overflow-y: scroll;
+    position: sticky;
+    bottom: 90px;
+    left: 300px;
+    z-index: 0;
     .message {
       .upper-message {
         display: flex;
@@ -61,10 +72,15 @@
       }
       .lower-message {
         margin-top: 10px;
+        margin-bottom: 40px;
         &__content {
           color: $black;
           font-size: 14px;
-          margin-bottom: 40px;
+        }
+        &__image {
+          width: 200px;
+          height: 200px;
+          object-fit: contain;
         }
       }
     }
@@ -79,6 +95,7 @@
     position: fixed;
     bottom: 0;
     left: 300px;
+    z-index: 5;
     &__message {
       border: none;
       float: left;
