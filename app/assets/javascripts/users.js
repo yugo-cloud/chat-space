@@ -47,8 +47,8 @@ $(function(){
 
   $(document).on("click", ".user-search-add", function () {
     $(this).parent().remove();
-    var userId = $(this).attr('data-user-id');
-    var userName = $(this).attr('data-user-name');
+    var userId = $(this).data('user-id');
+    var userName = $(this).data('user-name');
     addUser(userId, userName);
   });
 
