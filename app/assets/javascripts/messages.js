@@ -66,7 +66,7 @@ $(function(){
       $('.messages').animate({scrollTop: height}, 500, 'swing');
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   $(window).on('load',function(){
