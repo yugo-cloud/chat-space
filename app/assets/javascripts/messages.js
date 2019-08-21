@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load',function(){
   function buildHTML(message){
     var content = message.content ? `<p class="lower-message__content">${message.content}</p>` : "";
     var image = message.image ? `<img class="lower-message__image" src="${message.image}">` : "";
@@ -69,6 +69,8 @@ $(function(){
       alert('error');
     });
   };
+});
+$(function(){
   $(window).on('load',function(){
     if(document.URL.match("messages")) {
       setInterval(reloadMessages, 5000);
