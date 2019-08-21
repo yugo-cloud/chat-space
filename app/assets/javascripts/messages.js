@@ -40,7 +40,7 @@ $(function(){
       $('.messages').animate({scrollTop: height}, 500, 'swing');
     })
     .fail(function(){
-      alert('error');
+      alert('newMessageError');
     })
     return false;
   });
@@ -66,7 +66,7 @@ $(function(){
       $('.messages').animate({scrollTop: height}, 500, 'swing');
     })
     .fail(function() {
-      alert('error');
+      alert('reloadMessageError');
     });
   };
 
