@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load',function(){
+$(function(){
   function buildHTML(message){
     var content = message.content ? `<p class="lower-message__content">${message.content}</p>` : "";
     var image = message.image ? `<img class="lower-message__image" src="${message.image}">` : "";
@@ -23,7 +23,7 @@ $(document).on('turbolinks:load',function(){
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -43,7 +43,7 @@ $(document).on('turbolinks:load',function(){
       alert('error');
     })
     return false;
-  })
+  });
 
   var reloadMessages = function() {
     last_message_id = $('.message:last').data('id')
@@ -69,8 +69,7 @@ $(document).on('turbolinks:load',function(){
       alert('error');
     });
   };
-});
-$(function(){
+
   $(window).on('load',function(){
     if(document.URL.match("messages")) {
       setInterval(reloadMessages, 5000);
