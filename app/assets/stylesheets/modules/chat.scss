@@ -3,7 +3,7 @@
   height: 100vh;
   width: calc(100vw - 300px);
   .header {
-    background-color: $white;
+    background-color: #0f4c81;
     box-sizing: border-box;
     width: calc(100vw - 300px);
     height: 100px;
@@ -15,13 +15,13 @@
     .left-header {
       float: left;
       &__title {
-        color: #333;
+        color: #fff;
         font-size: 20px;
         margin-top: 35px;
       }
       &__members {
         display: flex;
-        color: $light_gray;
+        color: #fff;
         font-size: 12px;
         margin-top: 15px;
         .member {
@@ -31,13 +31,13 @@
       }
     }
     .right-header {
-      border: 1px solid $light_blue;
+      border: 2px solid $light_blue;
       color: $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
-      padding: 0 20px;
+      padding: 0 15px;
       a {
         color: $light_blue;
         text-decoration: none;
@@ -123,9 +123,10 @@
       float: right;
       font-size: 16px;
       height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
+      margin-left: 0x;
+      padding: 0 15px;
       cursor: pointer;
     }
   }
 }
+

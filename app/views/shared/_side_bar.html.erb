@@ -1,0 +1,33 @@
+<div class="side-bar">
+  <div class="header">
+    <h3 class="header__name">
+      <%= current_user.name %>
+    </h3>
+    <ul class="header__lists">
+      <li class="list">
+        <%= link_to new_group_path do %>
+          <%= fa_icon 'pencil-square-o', class: 'icon' %>
+        <% end %>
+      </li>
+      <li class="list">
+        <%= link_to edit_user_path(current_user) do %>
+          <%= fa_icon 'cog', class: 'icon' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+  <div class="groups">
+    <% current_user.groups.each do |group| %>
+      <div class="group">
+        <%= link_to group_messages_path(group) do %>
+          <div class="group__name">
+            <%= group.name %>
+          </div>
+          <div class="group__message">
+            <%= group.show_last_message %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

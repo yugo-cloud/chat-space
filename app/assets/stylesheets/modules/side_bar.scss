@@ -5,7 +5,7 @@
   width: 300px;
   height: 100vh;
   .header {
-    background-color: $side_blue_dark;
+    background-color: $light_blue;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
@@ -32,7 +32,7 @@
   }
 
   .groups {
-    background-color: $side_blue_light;
+    background-color: #0f4c81;
     height: calc(100vh - 100px);
     padding: 100px 20px 0;
     width: 260px;
